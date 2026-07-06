@@ -1,5 +1,3 @@
-import os
-
 from flask import Flask, render_template, request
 
 from src.pipeline.predict_pipeline import CustomData, PredictPipeline
@@ -54,5 +52,6 @@ def predict_datapoint():
 
 if __name__ == "__main__":
     app.run(
-        host="0.0.0.0"
+        host="0.0.0.0",
+        port=5000
     )
